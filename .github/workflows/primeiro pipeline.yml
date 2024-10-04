@@ -1,0 +1,46 @@
+#Aqui iremos nomear adequadamente nosso pipeline (fluxo de trabalho - WorkFlow0
+name: Primeiro workflow
+#Aqui iremos listar os eventos(gatilhos) que disparam o pipeline
+on:
+  push: 
+    branches:
+      - main
+      - hotfix
+      - develop
+  pull_request: 
+    branches: [main, hotfix, develop]
+#Aqui iremos quais trabalhos serão executados pelo workflow
+jobs:
+  Trabalho1:
+    name: Job 1
+    runs-on: ubuntu-latest
+#Aqui iremos programar os passos do script1
+    steps:
+      - name: Passo 1
+        run: echo "Executando o primeiro passo"
+      - name: Passo 2
+        run: echo "Executando o segundo passo"
+      - name: Passo 3
+        run: echo "Executando o terceiro passo"
+  Trabalho2:
+    name: Job 2
+    runs-on: ubuntu-latest
+#Aqui iremos programar as sequencias de passos do script2
+    steps:
+      - name: Passo 4
+        run: echo "Executando o quarto passo"
+      - name: Passo 5
+        run: echo "Executando o quinto passo"
+      - name: Passo 6
+        run: echo "Executando o sexto passo"
+  Trabalho3:
+    name: Job 3
+    runs-on: ubuntu-latest
+#Aqui iremos programar a sequencia de passos do script3
+    steps:
+      - name: Passo 7
+        run: echo "Executando o sétimo passo"
+      - name: Passo 8
+        run: echo "Executando o oitavo passo"
+      - name: Passo 9
+        run: echo "Executando o nono passo"
